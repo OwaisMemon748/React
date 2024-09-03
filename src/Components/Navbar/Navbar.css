@@ -1,0 +1,130 @@
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ced8ff;
+    padding: 15px 7%;
+    transition: background 0.5s;
+}
+
+.logo {
+    width: 160px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+ul {
+    flex: 1;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: Arial;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+ul li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black; /* Default color for light mode */
+    transition: width 0.8s ease, background-color 0.3s ease;
+}
+
+ul li:hover::after {
+    width: 100%; /* Expands the underline */
+}
+
+.toggle-icon {
+    width: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+/* Dark mode styles */
+.dark .navbar {
+    background: #feb828;
+    color: #fff;
+}
+
+.dark .logo {
+    height: 58px;
+    width: 150px;
+}
+
+.dark ul li::after {
+    background-color: #feb828; /* White underline for dark mode */
+}
+
+/* Optional: Smooth color transition */
+ul li {
+    transition: color 0.3s ease;
+}
+
+.toggle-icon{
+    width: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    border-radius: 50px;
+    padding: 5px;
+    width: 250px;
+}
+
+.search-box input {
+    padding: 6px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    flex: 1;
+}
+
+.search-box img {
+    height: 25px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+
+.search-box input::placeholder {
+    color: #fff;
+}
+
+.dark .navbar{
+    background: #000;
+    color: #feb828;
+}
+.dark .logo {
+    margin-top: 10px;
+    height: 58px;
+    width: 150px;
+}
+.dark .search-box{
+    background: #feb828
+}
+.dark .search-box input{
+    color: #222;
+}
+.dark .search-box input::placeholder{
+    color: #222; /* Fixes the visibility issue */
+}

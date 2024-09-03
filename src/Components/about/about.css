@@ -1,0 +1,89 @@
+/* Base styles for the About section */
+#about {
+    padding: 40px 0;
+    background-color: #ced8ff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Container */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* About Us Image */
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 600px; /* Adjust width to fit container */
+    height: 500px; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* About Text */
+.about-text {
+    flex: 2;
+    padding: 20px;
+    color: #333;
+    margin-top: -20px;
+    margin-left: 320px;
+}
+
+/* Heading styles */
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Smooth underline animation */
+.about-text h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #000;
+    transition: width 0.8s ease;
+}
+.about-text h2:hover::after {
+    width: 30%;
+}
+.about-text p {
+    font-size: 20px; /* Adjust font size as needed */
+    color: #000; /* Text color */
+    line-height: 1.6; /* Improve readability with line height */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+/* Dark mode styles */
+.dark #about {
+    background-color: #000;
+}
+
+.dark #about .about-text {
+    color: #fff;
+}
+.dark #about .about-text p {
+    color: #ffb828; /* Dark mode paragraph text color */
+}
+.dark #about .about-text h2 {
+    color: #ffb828;
+}
+
+.dark #about .about-text h2::after {
+    background-color: #ffb828;
+}
+

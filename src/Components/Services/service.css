@@ -1,0 +1,142 @@
+#services {
+    padding: 80px 0;
+    background: #ced8ff;
+    color: #000;
+    text-align: center;
+  }
+  
+  /* Base styles for the Services section */
+#services .section-title {
+    position: relative; /* Ensure the relative positioning */
+    text-align: center;
+  }
+  
+  #services .section-title h2 {
+    color: #000; /* Light mode title color */
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    margin: 0;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    position: relative;
+  }
+  
+  #services .section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    margin-top: 10px;
+    bottom: 0;
+    background-color: #000; /* Light mode underline color */
+    transition: all 0.8s ease;
+    transform: translateX(-50%);
+  }
+  
+  #services .section-title:hover h2::after {
+    width: 90%; /* Animation on hover */
+  }
+  
+  /* Dark mode for services title */
+  .dark #services .section-title h2 {
+    color: #ffb828; /* Dark mode title color */
+  }
+  
+  .dark #services .section-title h2::after {
+    background-color: #ffb828; /* Dark mode underline color */
+  }
+  
+
+  #services .row {
+    display: grid; /* Use grid layout for better control */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    gap: 30px; /* Add space between columns and rows */
+    justify-items: center; /* Center the items horizontally */
+  }
+  
+  #services .service-icon {
+    font-size: 42px;
+    width: 200px;
+    height: 120px;
+    padding: 40px 0;
+    background: #fff;
+    border-radius: 50%;
+    color: #000;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth hover effect */
+  }
+  
+  #services .service-icon:hover {
+    transform: translateY(-10px); /* Move icon slightly upwards */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Apply shadow on hover */
+  }
+  
+  #services .service-desc {
+    background-color: #000;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #services .service-desc:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #services h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  #services p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+  }
+  
+  /* Dark mode styles */
+  .dark #services {
+    background: #000;
+  }
+  
+  .dark #services .service-icon {
+    background: linear-gradient(to right, #131212 0%, #333333 100%); /* Black background for icon container in dark mode */
+    color: #ffb828; /* Yellow color for the icon */
+  }
+
+  .dark #services .service-icon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(219, 208, 45, 0.932); /* Dark mode shadow effect */
+  }
+  /* Dark Mode Styles for Text Box */
+.dark #services .service-desc {
+    background: linear-gradient(to right, #131212 0%, #333333 100%); /* Updated dark background gradient */
+  }
+  
+  /* Dark Mode Hover Shadow for Text Box */
+  .dark #services .service-desc:hover {
+    box-shadow: 0 8px 16px rgba(219, 208, 45, 0.932); /* Hover shadow remains the same */
+  }
+  
+
+  .dark #services h3 {
+    color: #ffb828;
+  }
+  
+  .dark #services p {
+    color: #ffb828;
+  }
+  .dark #services .section-title h2{
+    color: #ffb828;
+  }
+  
+  .dark #services .service-desc:hover {
+    box-shadow: 0 8px 16px rgba(219, 208, 45, 0.932);
+  }
+  

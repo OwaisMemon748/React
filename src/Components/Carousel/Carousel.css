@@ -1,0 +1,146 @@
+.carousel {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+    transition: background 0.1s;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Add padding to avoid text being too close to the edge */
+    z-index: 5; /* Ensure text is above the image */
+}
+
+.text-part {
+    margin: 5px 0;
+}
+
+.text-part.part1 {
+    font-size: 50px;
+    margin-top: 40px;
+    font-family: Trebuchet MS;
+}
+
+.text-part.part2 {
+    font-size: 80px;
+    color: #feb828;
+    font-family: Gill Sans;
+    margin-left: -5px;
+    display: inline-block; /* Required for typewriter effect */
+    overflow: hidden; /* Hide text overflow */
+    white-space: nowrap; /* Keep text on one line */
+    animation: typewriter 4s steps(40, end) 1s infinite, blinkCursorLight 500ms steps(40, end) infinite;
+    border-right: 2px solid black; /* Default to light mode cursor color */
+}
+
+.text-part.part3 {
+    font-size: 40px;
+    margin-left: 5px;
+    margin-bottom: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Typewriter Animation */
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Cursor blink animation for light mode */
+@keyframes blinkCursorLight {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black; /* Cursor color for light mode */
+    }
+}
+
+/* Cursor blink animation for dark mode */
+@keyframes blinkCursorDark {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #feb828; /* Cursor color for dark mode */
+    }
+}
+
+/* Dark Mode Specific Styles */
+.carousel.dark .carousel-image {
+    filter: brightness(0.7); /* Adjust brightness if needed */
+}
+
+.carousel.dark .text-part.part1 {
+    color: #fff; /* Light color for dark mode */
+}
+
+.carousel.dark .text-part.part2 {
+    color: #feb828; /* Yellow text for dark mode */
+    animation: typewriter 4s steps(40, end) 1s infinite, blinkCursorDark 500ms steps(40, end) infinite; /* Apply dark mode cursor animation */
+    border-right: 2px solid #feb828; /* Dark mode cursor color */
+}
+
+.carousel.dark .text-part.part3 {
+    color: #ddd; /* Light color for dark mode */
+}
+
+/* Disabled State */
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carousel.light .prev, .carousel.light .next {
+    color: black;
+}
+
+.carousel.dark .prev, .carousel.dark .next {
+    color: white;
+}
+
+.dark .carousel {
+    background-color: #000;
+}

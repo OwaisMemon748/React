@@ -1,0 +1,149 @@
+/* Testimonials Section */
+#testimonials {
+    padding: 80px 0;
+    background: #ced8ff;
+    overflow: hidden;
+    text-align: center;
+    height: 550px;
+    margin-bottom: -10px;
+  }
+  
+  .section-title {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Added for underline positioning */
+  }
+  
+  .section-title h2 {
+    font-size: 2.5rem;
+    color: #000;
+    position: relative; /* To position the underline */
+    margin-bottom: 0; /* Aligns the underline closer to the text */
+    padding-bottom: 5px;
+  }
+  
+  .section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    background-color: #000;
+    transition: all 0.8s ease;
+    transform: translateX(-50%);
+  }
+  
+  .section-title:hover h2::after {
+    width: 90%; /* Underline expands on hover */
+  }
+  
+  /* Dark mode for the testimonials section */
+  .dark #testimonials {
+    background: #000; /* Background for dark mode */
+  }
+  
+  .dark .section-title h2 {
+    color: #ffb828; /* Heading color for dark mode */
+  }
+  
+  .dark .section-title h2::after {
+    background-color: #ffb828; /* Underline color in dark mode */
+  }
+  
+  .dark .section-title:hover h2::after {
+    width: 90%; /* Same hover effect in dark mode */
+  }
+  
+  /* Container for testimonials */
+  .testimonial-slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 60px; /* Add side gaps (60px padding on both sides) */
+  }
+  
+  .testimonial-slider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    animation: continuousSlide 20s linear infinite;
+    white-space: nowrap;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .testimonial-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    flex: 0 0 calc(33.33% - 40px); /* Ensure cards fit with 40px gap between them */
+    margin: 0 20px; /* Space between individual cards */
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Dark mode for testimonial cards */
+  .dark .testimonial-card {
+    background: linear-gradient(to right, #131212 0%, #333333 100%);
+    color: #ffb828; /* Text color for dark mode */
+    box-shadow: 0 5px 15px rgba(219, 208, 45, 0.5);
+  }
+  
+  .dark .testimonial-card:hover {
+    box-shadow: 0 8px 16px rgba(219, 208, 45, 0.932);
+  }
+  
+  .testimonial-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  /* Dark mode adjustments for testimonial images */
+  .dark .testimonial-image img {
+    border: 3px solid #ffb828; /* Image border in dark mode */
+  }
+  
+  .testimonial-content p {
+    font-size: 14px;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .dark .testimonial-content p {
+    color: #ffb828; /* Dark mode text color */
+  }
+  
+  .testimonial-meta {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Dark mode for testimonial meta */
+  .dark .testimonial-meta {
+    color: #ffb828;
+  }
+  
+  @keyframes continuousSlide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  

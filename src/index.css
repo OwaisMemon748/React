@@ -1,0 +1,25 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container .footer-container{
+  margin-top: 10px;
+}
+.container{
+  width: 100%;
+  min-height: 100vh;
+
+  transition: 0.5s;
+}
+.container.dark{
+  /* background-color: #413a3a; */
+}
+.dark *{
+  /* background-color: #000; */
+}

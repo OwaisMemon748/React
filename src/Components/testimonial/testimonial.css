@@ -1,0 +1,96 @@
+#testimonials {
+    padding: 80px 0;
+    background: #ced8ff;
+    overflow: hidden;
+    text-align: center;
+    height: 550px;
+    margin-bottom: -10px;
+}
+
+.section-title {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center; /* Center the section title */
+    align-items: center; /* Align the title vertically */
+}
+
+.section-title h2 {
+    font-size: 2.5rem; /* Adjust font size if needed */
+    color: #000; /* Adjust the color */
+}
+
+
+/* Container for testimonials */
+.testimonial-slider-wrapper {
+    width: 100%;
+    overflow: hidden; /* Ensure only 3 cards are visible */
+}
+
+.testimonial-slider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    animation: continuousSlide 20s linear infinite; /* Continuous scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    flex: 0 0 30%; /* Make sure 3 cards fit in one row */
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
+
+.testimonial-image img {
+    width: 150px; /* Increase image width */
+    height: 150px; /* Increase image height */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-content p {
+    font-size: 14px;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.testimonial-meta {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+@keyframes continuousSlide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonial-card {
+        flex: 0 0 80%; /* Fewer cards in smaller screens */
+        min-height: 250px;
+    }
+
+    .testimonial-image img {
+        width: 100px; /* Adjust for mobile */
+        height: 100px;
+    }
+}

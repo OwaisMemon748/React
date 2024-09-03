@@ -1,0 +1,77 @@
+.footer {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ced8ff;
+    padding: 15px 7%;
+    transition: 0.5s;
+    margin: 0;
+    margin-top: -10px;
+}
+
+.footer .logo {
+    width: 160px;
+    cursor: pointer;
+}
+
+.footer h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial;
+    margin: 0;
+    color: inherit;
+}
+
+.footer .social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer .social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: filter 0.5s;
+}
+
+.footer .toggle-icon {
+    width: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.dark .footer {
+    background: #000;
+    color: #feb828;
+}
+
+.dark .footer .logo {
+    width: 150px;
+}
+
+.dark .footer h1 {
+    color: #feb828;
+}
+
+.dark .footer .social-icons img {
+
+    margin: 0;
+    padding: 0;
+    margin: 5px;
+    /* No need for filter since we're directly using the appropriate dark mode icons */
+}
+.dark .footer .facebook{
+    height: 25px;
+    margin-left: 20px;
+}
+.dark .footer .instagram{
+    height: 35px;
+    width: 53px;
+}
+.dark .footer .twitter{
+    height: 35px;
+    width: 50px;
+}
